@@ -14,5 +14,10 @@ public class TheMoneyExample {
 		product = ten.times(2);
 		assertEquals(20, product.amount);
 	}
+	@Test 
+	public void testEquality( ){
+		assertTrue(new Dollar(30).equals(new Dollar(30)));
+		assertFalse(new Dollar(30).equals(new Dollar(30)));
+	}
 
 }

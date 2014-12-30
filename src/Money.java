@@ -1,6 +1,6 @@
 package TheMoneyExample;
 
-public class Money {
+abstract class Money {
 	protected int amount;
 	
 	public boolean equals(Object object) {
@@ -8,4 +8,11 @@ public class Money {
 		return amount == money.amount &&
 				this.getClass() == money.getClass();
 	}
+	static Money franc( int amount){
+		return new Franc(amount);
+	}
+	static Money dollar( int amount){
+		return new Dollar(amount);
+	}
+	abstract Money times(int multiplier);
 }

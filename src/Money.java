@@ -15,4 +15,5 @@ abstract class Money {
 		return new Dollar(amount);
 	}
 	abstract Money times(int multiplier);
+	abstract String currency();
 }

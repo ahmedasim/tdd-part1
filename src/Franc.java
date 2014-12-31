@@ -2,14 +2,13 @@ package TheMoneyExample;
 
 public class Franc extends Money {
 	//private int amount;
-	private String currency;
-	Franc(int amount){
-		this.amount = amount;
-		currency = "CHF";
+	
+	Franc(int amount, String currency) {
+		super(amount, currency);
 	}
 	
-	public Franc times( int multiplier){
-		return new Franc(this.amount * multiplier);
+	Money times(int multiplier) {
+		return new Money(amount * multiplier, currency);
 	}
 	String currency() {
 		return "CHF";

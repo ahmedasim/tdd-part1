@@ -24,13 +24,13 @@ package TheMoneyExample;
 	String currency(){
 		return currency;
 	}
-	Money times(int multiplier){
+	Expression times(int multiplier){
 		return new Money(amount * multiplier, currency);
 	}
 	public String toString() {
 		return this.amount + " " + this.currency;
 	}
-	Expression plus(Money addend) {
+	public Expression plus(Expression addend) {
 		return new Sum(this, addend);
 	}
 		
@@ -38,4 +38,5 @@ package TheMoneyExample;
 		int rate = bank.rate(currency, to);
 		return new Money(amount / rate, to);
 	}
+
 }

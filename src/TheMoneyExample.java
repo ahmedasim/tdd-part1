@@ -32,10 +32,6 @@ public class TheMoneyExample {
 		assertEquals("CHF", Money.franc(1).currency());
 	}
 	@Test
-	public void testDifferentClassEquality() {
-		assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
-	}
-	@Test
 	public void testSimpleAddition() {
 		Money five= Money.dollar(5);
 		Expression sum= five.plus(five);
